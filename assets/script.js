@@ -12,10 +12,82 @@ async function getPokemons(page = 0,number = 99){
         const server1 = await fetch(item.url);
         const data1 = await server1.json();
 
-        console.log(data1);
+        //requisitar caract nos links
+        // console.log(data1.stats[0].stat); 
+        // console.log(data1.stats[1].stat);
+        // console.log(data1.stats[2].stat);
+        // console.log(data1.stats[3].stat);
+        // console.log(data1.stats[4].stat);
+        
 
         const name = data1.name;
         const id = data1.id;
+
+
+////EVOLUCAO
+
+        let evolutionName1 = "";
+        let evolutionName2 = "";
+        let evolutionName3 = "";
+        let evolutionId1 = "";
+        let evolutionId2 = "";
+        let evolutionId3 = "";
+
+        try {
+
+            const species1 =  await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);
+            const species2 = await species1.json();
+            const species = species2.evolution_chain.url;
+    
+            const evolution1 = await fetch(species);
+            const evolution = await evolution1.json();
+
+            try{
+                evolutionName1 = evolution.chain.species.name;
+            } catch(e){
+                evolutionName1 = "Not found";
+            }
+            try{
+                evolutionName2 = evolution.chain.evolves_to[0].species.name;
+            } catch(e){
+                evolutionName2 = "Not found";
+            }
+            try{
+                evolutionName3 = evolution.chain.evolves_to[0].evolves_to[0].species.name;
+            } catch(e){
+                evolutionName3 = "Not found";
+            }
+
+            try{
+                evolutionId1 = evolution.chain.species.url.replace("https://pokeapi.co/api/v2/pokemon-species/", "").replace("/", "").split(' ').join('');
+            } catch(e){
+                evolutionId1 = "Not found";
+            }
+            try{
+                evolutionId2 = evolution.chain.evolves_to[0].species.url.replace("https://pokeapi.co/api/v2/pokemon-species/", "").replace("/", "").split(' ').join('');
+            } catch(e){
+                evolutionId2 = "Not found";
+            }
+            try{
+                evolutionId3 = evolution.chain.evolves_to[0].evolves_to[0].species.url.replace("https://pokeapi.co/api/v2/pokemon-species/", "").replace("/", "").split(' ').join('');
+            } catch(e){
+                evolutionId3 = "Not found";
+            }
+            console.log(evolutionName1);
+            console.log(evolutionId1);
+            console.log(evolutionName2);
+            console.log(evolutionId2);
+            console.log(evolutionName3);
+            console.log(evolutionId3);
+            console.log("");
+    
+        } 
+        
+        catch(e){
+            console.log("ERRO 404");
+        }
+////
+
 
         let image = "";
 
@@ -66,6 +138,7 @@ async function getPokemons(page = 0,number = 99){
 
                                 <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
                                 <img class="characterImage" src=${image}>
+                                <p>${evolutionName1} ${evolutionId1}, ${evolutionName2} ${evolutionId2}, ${evolutionName3} ${evolutionId3}</p>
                                 <p class="name">${name.toUpperCase()}</p>
                                 <p class="ID">ID: ${id}</p>
                                 <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
@@ -96,6 +169,7 @@ async function getPokemons(page = 0,number = 99){
 
                                 <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
                                 <img class="characterImage" src=${image}>
+                                <p>${evolutionName1} ${evolutionId1}, ${evolutionName2} ${evolutionId2}, ${evolutionName3} ${evolutionId3}</p>
                                 <p class="name">${name.toUpperCase()}</p>
                                 <p class="ID">ID: ${id}</p>
                                 <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
@@ -126,6 +200,7 @@ async function getPokemons(page = 0,number = 99){
 
                                 <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
                                 <img class="characterImage" src=${image}>
+                                <p>${evolutionName1} ${evolutionId1}, ${evolutionName2} ${evolutionId2}, ${evolutionName3} ${evolutionId3}</p>
                                 <p class="name">${name.toUpperCase()}</p>
                                 <p class="ID">ID: ${id}</p>
                                 <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
@@ -156,6 +231,7 @@ async function getPokemons(page = 0,number = 99){
 
                                 <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
                                 <img class="characterImage" src=${image}>
+                                <p>${evolutionName1} ${evolutionId1}, ${evolutionName2} ${evolutionId2}, ${evolutionName3} ${evolutionId3}</p>
                                 <p class="name">${name.toUpperCase()}</p>
                                 <p class="ID">ID: ${id}</p>
                                 <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
@@ -186,6 +262,7 @@ async function getPokemons(page = 0,number = 99){
 
                                 <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
                                 <img class="characterImage" src=${image}>
+                                <p>${evolutionName1} ${evolutionId1}, ${evolutionName2} ${evolutionId2}, ${evolutionName3} ${evolutionId3}</p>
                                 <p class="name">${name.toUpperCase()}</p>
                                 <p class="ID">ID: ${id}</p>
                                 <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
