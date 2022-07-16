@@ -12,6 +12,8 @@ async function getPokemons(page = 0,number = 99){
         const server1 = await fetch(item.url);
         const data1 = await server1.json();
 
+        console.log(data1);
+
         const name = data1.name;
         const id = data1.id;
 
@@ -51,14 +53,27 @@ async function getPokemons(page = 0,number = 99){
             document.querySelector("#cardList").insertAdjacentHTML("beforeend", `
             
             <div class="card">
-            <img class="characterImage" src=${image}>
-            <div class="characterInfo">
-                <p class="name">${name.toUpperCase()}</p>
-                <p class="ID">ID: ${id}</p>
-                <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
-                <p class="description">${mystring}</p>
-                <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
-            </div>
+                <img class="characterImage" src=${image}>
+                <div class="characterInfo">
+                    <p class="name">${name.toUpperCase()}</p>
+                    <p class="ID">ID: ${id}</p>
+                    <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                    <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
+
+                    <span class="descriptionPokemon">
+                        <div class="descriptionPokemon1">
+
+                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                            <img class="characterImage" src=${image}>
+                            <p class="name">${name.toUpperCase()}</p>
+                            <p class="ID">ID: ${id}</p>
+                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                            <p class="description">${mystring}</p>
+
+                        </div>
+                    </span>
+
+                </div>
             </div>
 
             `)
@@ -66,14 +81,27 @@ async function getPokemons(page = 0,number = 99){
             document.querySelector("#cardList").insertAdjacentHTML("beforeend", `
             
             <div class="card">
-            <img class="characterImage" src=${image}>
-            <div class="characterInfo">
-                <p class="name">${name.toUpperCase()}</p>
-                <p class="ID">ID: ${id}</p>
-                <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}</p>
-                <p class="description">${mystring}</p>
-                <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
-            </div>
+                <img class="characterImage" src=${image}>
+                <div class="characterInfo">
+                    <p class="name">${name.toUpperCase()}</p>
+                    <p class="ID">ID: ${id}</p>
+                    <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}</p>
+                    <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
+                    
+                    <span class="descriptionPokemon">
+                        <div class="descriptionPokemon1">
+
+                            <img class="characterImage" src=${image}>
+                            <p class="name">${name.toUpperCase()}</p>
+                            <p class="ID">ID: ${id}</p>
+                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                            <p class="description">${mystring}</p>
+                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                            
+                        </div>
+                    </span>
+
+                </div>
             </div>
 
             `)
@@ -81,14 +109,27 @@ async function getPokemons(page = 0,number = 99){
             document.querySelector("#cardList").insertAdjacentHTML("beforeend", `
             
             <div class="card">
-            <img class="characterImage" src=${image}>
-            <div class="characterInfo">
-                <p class="name">${name.toUpperCase()}</p>
-                <p class="ID">ID: ${id}</p>
-                <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}, ${data1.types[2].type.name.toUpperCase()}</p>
-                <p class="description">${mystring}</p>
-                <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
-            </div>
+                <img class="characterImage" src=${image}>
+                <div class="characterInfo">
+                    <p class="name">${name.toUpperCase()}</p>
+                    <p class="ID">ID: ${id}</p>
+                    <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}, ${data1.types[2].type.name.toUpperCase()}</p>
+                    <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
+                    
+                    <span class="descriptionPokemon">
+                        <div class="descriptionPokemon1">
+
+                            <img class="characterImage" src=${image}>
+                            <p class="name">${name.toUpperCase()}</p>
+                            <p class="ID">ID: ${id}</p>
+                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                            <p class="description">${mystring}</p>
+                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                            
+                        </div>
+                    </span>
+                    
+                </div>
             </div>
 
             `)
@@ -96,14 +137,27 @@ async function getPokemons(page = 0,number = 99){
             document.querySelector("#cardList").insertAdjacentHTML("beforeend", `
             
             <div class="card">
-            <img class="characterImage" src=${image}>
-            <div class="characterInfo">
-                <p class="name">${name.toUpperCase()}</p>
-                <p class="ID">ID: ${id}</p>
-                <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}, ${data1.types[2].type.name.toUpperCase()}, ${data1.types[3].type.name.toUpperCase()}</p>
-                <p class="description">${mystring}</p>
-                <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
-            </div>
+                <img class="characterImage" src=${image}>
+                <div class="characterInfo">
+                    <p class="name">${name.toUpperCase()}</p>
+                    <p class="ID">ID: ${id}</p>
+                    <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}, ${data1.types[2].type.name.toUpperCase()}, ${data1.types[3].type.name.toUpperCase()}</p>
+                    <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
+                    
+                    <span class="descriptionPokemon">
+                        <div class="descriptionPokemon1">
+
+                            <img class="characterImage" src=${image}>
+                            <p class="name">${name.toUpperCase()}</p>
+                            <p class="ID">ID: ${id}</p>
+                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                            <p class="description">${mystring}</p>
+                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                            
+                        </div>
+                    </span>
+                    
+                </div>
             </div>
 
             `)
@@ -111,14 +165,27 @@ async function getPokemons(page = 0,number = 99){
             document.querySelector("#cardList").insertAdjacentHTML("beforeend", `
             
             <div class="card">
-            <img class="characterImage" src=${image}>
-            <div class="characterInfo">
-                <p class="name">${name.toUpperCase()}</p>
-                <p class="ID">ID: ${id}</p>
-                <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}, ${data1.types[2].type.name.toUpperCase()}, ${data1.types[3].type.name.toUpperCase()}, ${data1.types[4].type.name.toUpperCase()}</p>
-                <p class="description">${mystring}</p>
-                <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
-            </div>
+                <img class="characterImage" src=${image}>
+                <div class="characterInfo">
+                    <p class="name">${name.toUpperCase()}</p>
+                    <p class="ID">ID: ${id}</p>
+                    <p class="type">${data1.types[0].type.name.toUpperCase()}, ${data1.types[1].type.name.toUpperCase()}, ${data1.types[2].type.name.toUpperCase()}, ${data1.types[3].type.name.toUpperCase()}, ${data1.types[4].type.name.toUpperCase()}</p>
+                    <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
+                    
+                    <span class="descriptionPokemon">
+                        <div class="descriptionPokemon1">
+
+                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                            <img class="characterImage" src=${image}>
+                            <p class="name">${name.toUpperCase()}</p>
+                            <p class="ID">ID: ${id}</p>
+                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                            <p class="description">${mystring}</p>
+                            
+                        </div>
+                    </span>
+                    
+                </div>
             </div>
 
             `)
@@ -131,7 +198,17 @@ function showDescription(){
     for (let n of buttons){
         n.addEventListener("click", function(){
             console.log(n.parentElement.querySelector(".ID").innerText.replace("ID:", "").split(' ').join(''));
+
+            n.parentElement.querySelector(".descriptionPokemon").style.display="unset";
         });
+    }
+}
+
+function closeDescription(){
+    const description = document.querySelectorAll(".descriptionPokemon");
+
+    for (let n of description){
+        n.style.display="none";
     }
 }
 
