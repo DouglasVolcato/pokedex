@@ -54,22 +54,24 @@ async function getPokemons(page = 0,number = 99){
             
             <div class="card">
                 <img class="characterImage" src=${image}>
-                <div class="characterInfo">
+                <div class="characterInfo">                    
                     <p class="name">${name.toUpperCase()}</p>
                     <p class="ID">ID: ${id}</p>
                     <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
                     <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
 
                     <span class="descriptionPokemon">
-                        <div class="descriptionPokemon1">
+                        <div class="descriptionPokemon2">
+                            <div class="descriptionPokemon1">
 
-                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
-                            <img class="characterImage" src=${image}>
-                            <p class="name">${name.toUpperCase()}</p>
-                            <p class="ID">ID: ${id}</p>
-                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
-                            <p class="description">${mystring}</p>
+                                <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                                <img class="characterImage" src=${image}>
+                                <p class="name">${name.toUpperCase()}</p>
+                                <p class="ID">ID: ${id}</p>
+                                <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                                <p class="description">${mystring}</p>
 
+                            </div>
                         </div>
                     </span>
 
@@ -89,15 +91,17 @@ async function getPokemons(page = 0,number = 99){
                     <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
                     
                     <span class="descriptionPokemon">
-                        <div class="descriptionPokemon1">
+                        <div class="descriptionPokemon2">
+                            <div class="descriptionPokemon1">
 
-                            <img class="characterImage" src=${image}>
-                            <p class="name">${name.toUpperCase()}</p>
-                            <p class="ID">ID: ${id}</p>
-                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
-                            <p class="description">${mystring}</p>
-                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
-                            
+                                <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                                <img class="characterImage" src=${image}>
+                                <p class="name">${name.toUpperCase()}</p>
+                                <p class="ID">ID: ${id}</p>
+                                <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                                <p class="description">${mystring}</p>
+
+                            </div>
                         </div>
                     </span>
 
@@ -117,15 +121,17 @@ async function getPokemons(page = 0,number = 99){
                     <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
                     
                     <span class="descriptionPokemon">
-                        <div class="descriptionPokemon1">
+                        <div class="descriptionPokemon2">
+                            <div class="descriptionPokemon1">
 
-                            <img class="characterImage" src=${image}>
-                            <p class="name">${name.toUpperCase()}</p>
-                            <p class="ID">ID: ${id}</p>
-                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
-                            <p class="description">${mystring}</p>
-                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
-                            
+                                <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                                <img class="characterImage" src=${image}>
+                                <p class="name">${name.toUpperCase()}</p>
+                                <p class="ID">ID: ${id}</p>
+                                <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                                <p class="description">${mystring}</p>
+
+                            </div>
                         </div>
                     </span>
                     
@@ -145,15 +151,17 @@ async function getPokemons(page = 0,number = 99){
                     <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
                     
                     <span class="descriptionPokemon">
-                        <div class="descriptionPokemon1">
+                        <div class="descriptionPokemon2">
+                            <div class="descriptionPokemon1">
 
-                            <img class="characterImage" src=${image}>
-                            <p class="name">${name.toUpperCase()}</p>
-                            <p class="ID">ID: ${id}</p>
-                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
-                            <p class="description">${mystring}</p>
-                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
-                            
+                                <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                                <img class="characterImage" src=${image}>
+                                <p class="name">${name.toUpperCase()}</p>
+                                <p class="ID">ID: ${id}</p>
+                                <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                                <p class="description">${mystring}</p>
+
+                            </div>
                         </div>
                     </span>
                     
@@ -173,15 +181,17 @@ async function getPokemons(page = 0,number = 99){
                     <button type="button" class="showDescription" onclick="showDescription()">Show Description</button>
                     
                     <span class="descriptionPokemon">
-                        <div class="descriptionPokemon1">
+                        <div class="descriptionPokemon2">
+                            <div class="descriptionPokemon1">
 
-                            <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
-                            <img class="characterImage" src=${image}>
-                            <p class="name">${name.toUpperCase()}</p>
-                            <p class="ID">ID: ${id}</p>
-                            <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
-                            <p class="description">${mystring}</p>
-                            
+                                <button type="button" class="closeDescription" onclick="closeDescription()">Close</button>
+                                <img class="characterImage" src=${image}>
+                                <p class="name">${name.toUpperCase()}</p>
+                                <p class="ID">ID: ${id}</p>
+                                <p class="type">${data1.types[0].type.name.toUpperCase()}</p>
+                                <p class="description">${mystring}</p>
+
+                            </div>
                         </div>
                     </span>
                     
