@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Pokedéx</title>
+</head>
+<body>
+
+    <header id="header">
+        <img src="./assets/images/logo1.png" alt="Logo Pokémon" class="logo">
+        <h1 class="logo">POKEDÉX</h1>
+        <img src="./assets/images/logo2.png" alt="Pokeball" class="logo">
+
+    </header>
+
+    <nav>
+        <div id="pageButtons">
+
+            <button class="pageBtn" type="button" onclick="getPokemons(0, 100)">1</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(100, 100)">2</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(200, 100)">3</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(300, 100)">4</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(400, 100)">5</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(500, 100)">6</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(600, 300)">7</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(900, 100)">8</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(1000, 100)">9</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(1100, 100)">10</button>
+
+        </div>
+    </nav>
+
+    <main>
+        <section id="cardList">
+        </section>
+    </main>
+
+    <div id="final"></div>
+    <footer>
+
+        <div id="pageButtons">
+
+            <button class="pageBtn" type="button" onclick="getPokemons(0, 100)">1</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(100, 100)">2</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(200, 100)">3</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(300, 100)">4</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(400, 100)">5</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(500, 100)">6</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(600, 300)">7</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(900, 100)">8</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(1000, 100)">9</button>
+            <button class="pageBtn" type="button" onclick="getPokemons(1100, 100)">10</button>
+
+        </div>
+
+        <h2 class="logo">===| Made by Douglas Volcato |===</h2>
+
+    </footer>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
