@@ -50,7 +50,7 @@ main{
 .card{
     margin-top: 2vw;
     background-color: rgb(255, 255, 255);
-    height: 30vw;
+    height: 33.5vw;
     width: 20vw;
     display: flex;
     flex-direction: column;
@@ -73,6 +73,7 @@ main{
     text-align: center;
     background-color: rgb(255, 255, 255);
     padding: 1vw;
+    padding-top: 1vw;
     border-top: solid 0.5vw rgb(88, 88, 88);
 }
 .name{
@@ -87,7 +88,6 @@ main{
     font-size: 1.3vw;
 }
 
-
 /*  */
 .descriptionPokemon{
     display: none;
@@ -99,13 +99,20 @@ main{
     max-height: 100%;
     max-width: 100%;
     background-color: red;
-    padding: 3vw;
+    padding: 1.5vw;
+}
+.descriptionPokemon2{
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+    border-radius: 9%;
+    padding: 1.5vw;
 }
 .descriptionPokemon1{
     background-color: wheat;
     height: 100%;
     width: 100%;
-    border-radius: 9%;
+    border-radius: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
