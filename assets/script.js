@@ -86,9 +86,9 @@ async function getPokemons(page = 0,number = 99){
         evolutionImage1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId1}.png`;
         evolutionImage2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId2}.png`;
         evolutionImage3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId3}.png`;
-        evolutionImage1Real = evolutionImage1 == evolutionId1 == "" ? "./assets/images/noImage.jpg" : evolutionImage1;
-        evolutionImage2Real = evolutionImage2 == evolutionId2 == "" ? "./assets/images/noImage.jpg" : evolutionImage2;
-        evolutionImage3Real = evolutionImage3 == evolutionId3 == "" ? "./assets/images/noImage.jpg" : evolutionImage3;
+        evolutionImage1Real = evolutionId1Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage1;
+        evolutionImage2Real = evolutionId2Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage2;
+        evolutionImage3Real = evolutionId3Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage3;
 
         let image = "";
 
