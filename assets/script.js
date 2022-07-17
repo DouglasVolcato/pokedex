@@ -191,7 +191,7 @@ async function getPokemons(page = 0,number = 99){
             } if (a.toUpperCase() == "ROCK"){
                 answer = `<a class="type" style="background-color:brown; color:white">${a}</a>`;
             } if (a.toUpperCase() == "WATER"){
-                answer = `<a class="type" style="background-color:steelblue">${a}</a>`;
+                answer = `<a class="type" style="background-color:steelblue; color:white">${a}</a>`;
             }
 
             if (answer == undefined){return ""}
@@ -223,7 +223,7 @@ async function getPokemons(page = 0,number = 99){
 
                                 <div class="divImages">
                                     <div>
-                                        <img class="characterImage" src=${image}>
+                                        <img class="characterImage1" src=${image}>
                                         <p class="name">${name.toUpperCase()}</p>
                                         <p class="ID">ID: ${id}</p>
                                     </div>
