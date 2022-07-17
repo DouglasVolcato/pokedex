@@ -50,7 +50,7 @@ main{
 .card{
     margin-top: 2vw;
     background-color: rgb(255, 255, 255);
-    height: 33.5vw;
+    height: 34vw;
     width: 20vw;
     display: flex;
     flex-direction: column;
@@ -78,17 +78,35 @@ main{
 }
 .name{
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 .type{
     font-weight: bold;
     font-size: 1.3vw;
+    border: solid 0.1vw black;
+    border-radius: 40%;
+    padding: 0.2vw;
+    margin-top: 3vw;
+    
+}
+.types{
+    display: flex;
+    justify-content: center;
 }
 .ID, .type, .description{
     font-size: 1.3vw;
+    margin: 0.5vw;
 }
-
-/*  */
+.divImages{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.evolucoes{
+    display: flex;
+    border: solid 0.5vw;
+    background-color: white;
+}
 .descriptionPokemon{
     display: none;
     position: fixed;
@@ -120,10 +138,11 @@ main{
 .showDescription, .closeDescription{
     padding: 0.1vw;
     margin: 0.7vw;
-    font-size: 1.2vw;
-    background-color: orange;
-    border: solid 0.1vw brown;
-    width: 10vw;
+    font-size: 1.1vw;
+    font-weight: bold;
+    background-color: rgb(207, 255, 136);
+    border: solid 0.2vw rgb(0, 0, 0);
+    width: 11vw;
 }
 .closeDescription{
     margin-left: 85%;
@@ -132,9 +151,35 @@ main{
     background-color: blue;
     color: yellow;
 }
-/*  */
-
-
+.description_class_stats{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.descriptionPage{
+    font-size: 1.3vw;
+    margin: 2vw;
+}
+.stats{
+    font-size: 1.3vw;
+    text-align: left;
+    border: solid 0.2vw;
+    padding: 0.5vw;
+    background-color: yellowgreen;
+}
+.stats p::first-letter{
+    text-transform: uppercase;
+}
+.typePage{
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin: 1.5vw;
+}
+.typePage,.type{
+    background-color: aqua;
+    width: 8vw;
+    /* margin: auto; */
+}
 #final{
     width: 100%;
     height: 3vw;
