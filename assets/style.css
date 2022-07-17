@@ -90,6 +90,7 @@ main{
     
 }
 .types{
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -106,6 +107,9 @@ main{
     display: flex;
     border: solid 0.5vw;
     background-color: white;
+}
+.evolucoes:hover{
+    border-color: yellow;
 }
 .descriptionPokemon{
     display: none;
@@ -144,6 +148,16 @@ main{
     border: solid 0.2vw rgb(0, 0, 0);
     width: 11vw;
 }
+.divImages div .characterImage1{
+    height: 17vw;
+    width: 17vw;
+    margin: 0 auto;
+    border: solid 0.5vw;
+    border-radius: 10%;
+}
+.divImages div .characterImage1:hover{
+    border-color: yellow;
+}
 .closeDescription{
     margin-left: 85%;
 }
@@ -156,8 +170,11 @@ main{
     justify-content:space-evenly;
     flex-wrap: wrap;
 }
+.description_class_stats div{
+    max-width: 60%;
+}
 .descriptionPage{
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     margin: 2vw;
 }
 .stats{
@@ -167,6 +184,10 @@ main{
     border: solid 0.2vw;
     padding: 0.5vw;
     background-color: yellowgreen;
+}
+.stats:hover{
+    background-color: black;
+    color: wheat;
 }
 .stats p::first-letter{
     text-transform: uppercase;
@@ -179,7 +200,9 @@ main{
 .typePage,.type{
     background-color: aqua;
     width: 8vw;
-    /* margin: auto; */
+}
+.type:hover, typePage:hover{
+    border-color: aqua;
 }
 #final{
     width: 100%;
@@ -200,10 +223,10 @@ footer{
     margin: 0 3vw 4vw 3vw;
 }
 .pageBtn{
-    width: 3vw;
-    height: 3vw;
-    font-size: 2vw;
-    background-color: orange;
+    width: 4vw;
+    height: 4vw;
+    font-size: 2.4vw;
+    background-color: rgb(220, 220, 3);
     color: black;
     font-weight: bold;
     border-radius: 50%;
@@ -212,3 +235,7 @@ footer{
     background-color: blue;
     color: yellow;
 }
+
+/* @media(max-width: 800px){
+    
+} */
