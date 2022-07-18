@@ -223,7 +223,7 @@ async function getPokemons(page = 0,number = 99){
 
                                 <div class="divImages">
                                     <div>
-                                        <img class="characterImage1" src=${image}>
+                                        <img class="characterImage" src=${image}>
                                         <p class="name">${name.toUpperCase()}</p>
                                         <p class="ID">ID: ${id}</p>
                                     </div>
