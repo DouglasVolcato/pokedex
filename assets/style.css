@@ -236,6 +236,490 @@ footer{
     color: yellow;
 }
 
-/* @media(max-width: 800px){
-    
-} */
+@media(max-width:800px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html{
+        height: 100%;
+        width: 100%;
+        background-color: red;
+    }
+    html{
+     padding: 1vw;   
+    }
+    #header{
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+        height: 30vw;
+        background-color: wheat;
+        border: solid 1vw orange;
+        margin-bottom: 1vw;
+    }
+    .logo{
+        height: 23vw;
+        margin: auto;
+    }
+    h1{
+        display: none;
+    }
+    nav{
+        width: 100%;
+        height: 9vw;
+        font-size: 2.4vw;
+        text-align: center;
+    }
+    main{
+        width: 100%;
+        background-color: wheat;
+        padding: 1vw;
+        border: solid 1vw orange;
+    }
+    #cardList{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .card{
+        margin-top: 2vw;
+        background-color: rgb(255, 255, 255);
+        height: 52vw;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        padding: 1vw;
+        border-radius: 5%;
+        border: solid 0.5vw rgb(88, 88, 88);
+    }
+    .card:hover{
+        border-color:yellow;
+    }
+    .characterImage{
+        height: 23vw;
+        width: 23vw;
+        margin: 0 auto;
+    }
+    .characterInfo{
+        height: 23vw;
+        width: 23vw;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        padding: 1vw;
+        padding-top: 1vw;
+        border-top: solid 0.5vw rgb(88, 88, 88);
+        display: flex;
+        flex-direction: column;
+    }
+    .name{
+        font-weight: bold;
+        font-size: 2vw;
+        margin: 2vw;
+    }
+    .type{
+        font-weight: bold;
+        font-size: 2.4vw;
+        border: solid 0.1vw black;
+        border-radius: 40%;
+        padding: 0.2vw;
+        margin: 3vw;
+        
+    }
+    .types{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .ID, .type, .description{
+        font-size: 2vw;
+        margin: 0.3vw;
+        margin: auto;
+    }
+    .divImages{
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+    }
+    .evolucoes{
+        display: flex;
+        border: solid 0.5vw;
+        background-color: white;
+    }
+    .evolucoes:hover{
+        border-color: yellow;
+    }
+    .descriptionPokemon{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        background-color: red;
+        padding: 1vw;
+    }
+    .descriptionPokemon2{
+        background-color: orange;
+        height: 100%;
+        width: 100%;
+        border-radius: 9%;
+        padding: 1vw;
+    }
+    .descriptionPokemon1{
+        background-color: wheat;
+        height: 100%;
+        width: 100%;
+        border-radius: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .showDescription, .closeDescription{
+        padding: 0.1vw;
+        margin: 0.7vw;
+        font-size: 2.2vw;
+        font-weight: bold;
+        background-color: rgb(207, 255, 136);
+        border: solid 0.2vw rgb(0, 0, 0);
+        width: 16vw;
+    }
+    .showDescription{
+        margin: auto;
+    }
+    .divImages div .characterImage1{
+        height: 23vw;
+        width: 23vw;
+        margin: 0 auto;
+        border: solid 0.5vw;
+        border-radius: 10%;
+    }
+    .divImages div .characterImage1:hover{
+        border-color: yellow;
+    }
+    .closeDescription{
+        margin-left: 74%;
+    }
+    .showDescription:hover, .closeDescription:hover{
+        background-color: blue;
+        color: yellow;
+    }
+    .description_class_stats{
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+    }
+    .description_class_stats div{
+        max-width: 60%;
+    }
+    .descriptionPage{
+        font-size: 2vw;
+        margin: 1vw;
+    }
+    .stats{
+        font-weight: bold;
+        font-size: 2vw;
+        text-align: left;
+        border: solid 0.2vw;
+        padding: 0.5vw;
+        background-color: yellowgreen;
+    }
+    .stats:hover{
+        background-color: black;
+        color: wheat;
+    }
+    .stats p::first-letter{
+        text-transform: uppercase;
+    }
+    .typePage{
+        font-size: 2vw;
+        font-weight: bold;
+        margin: 1vw;
+    }
+    .typePage,.type{
+        background-color: aqua;
+        width: 12vw;
+    }
+    .type:hover, typePage:hover{
+        border-color: aqua;
+    }
+    #final{
+        width: 100%;
+        height: 4vw;
+    }
+    footer{
+        border: solid 1.3vw orange;
+        height: 24vw;
+        background-color: wheat;
+        border-radius: 5%;
+        padding: 1vw;
+        text-align: center;
+        font-size: 1.8vw;
+    }
+    #pageButtons{
+        display:flex;
+        justify-content: space-evenly;
+        margin: 0 3vw 4vw 3vw;
+    }
+    .pageBtn{
+        width: 6vw;
+        height: 6vw;
+        font-size: 3vw;
+        background-color: rgb(220, 220, 3);
+        color: black;
+        font-weight: bold;
+        border-radius: 50%;
+    }
+    .pageBtn:hover{
+        background-color: blue;
+        color: yellow;
+    }
+}
+
+@media(max-width:600px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html{
+        height: 100%;
+        width: 100%;
+        background-color: red;
+    }
+    html{
+     padding: 1vw;   
+    }
+    #header{
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+        height: 40vw;
+        background-color: wheat;
+        border: solid 1vw orange;
+        margin-bottom: 1vw;
+    }
+    .logo{
+        height: 30vw;
+        margin: auto;
+    }
+    h1{
+        display: none;
+    }
+    nav{
+        width: 100%;
+        height: 12vw;
+        font-size: 3vw;
+        text-align: center;
+    }
+    main{
+        width: 100%;
+        background-color: wheat;
+        padding: 1vw;
+        border: solid 1vw orange;
+    }
+    #cardList{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .card{
+        margin-top: 2vw;
+        background-color: rgb(255, 255, 255);
+        height: 70vw;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        padding: 1vw;
+        border-radius: 5%;
+        border: solid 0.5vw rgb(88, 88, 88);
+    }
+    .card:hover{
+        border-color:yellow;
+    }
+    .characterImage{
+        height: 30vw;
+        width: 30vw;
+        margin: 0 auto;
+    }
+    .characterInfo{
+        height: 30vw;
+        width: 30vw;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        padding: 1vw;
+        padding-top: 1vw;
+        border-top: solid 0.5vw rgb(88, 88, 88);
+        display: flex;
+        flex-direction: column;
+    }
+    .name{
+        font-weight: bold;
+        font-size: 3vw;
+        margin: 2vw;
+    }
+    .type{
+        font-weight: bold;
+        font-size: 2.8vw;
+        border: solid 0.1vw black;
+        border-radius: 40%;
+        padding: 0.2vw;
+        margin: 3vw;
+        
+    }
+    .types{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .ID, .type, .description{
+        font-size: 2.6vw;
+        margin: 0.3vw;
+        margin: auto;
+    }
+    .divImages{
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+    }
+    .evolucoes{
+        display: flex;
+        border: solid 0.5vw;
+        background-color: white;
+    }
+    .evolucoes:hover{
+        border-color: yellow;
+    }
+    .descriptionPokemon{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        background-color: red;
+        padding: 1vw;
+    }
+    .descriptionPokemon2{
+        background-color: orange;
+        height: 100%;
+        width: 100%;
+        border-radius: 9%;
+        padding: 1vw;
+    }
+    .descriptionPokemon1{
+        background-color: wheat;
+        height: 100%;
+        width: 100%;
+        border-radius: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .showDescription, .closeDescription{
+        padding: 0.1vw;
+        margin: 0.7vw;
+        font-size: 2.2vw;
+        font-weight: bold;
+        background-color: rgb(207, 255, 136);
+        border: solid 0.2vw rgb(0, 0, 0);
+        width: 22vw;
+    }
+    .showDescription{
+        margin: auto;
+    }
+    .divImages div .characterImage1{
+        height: 34vw;
+        width: 34vw;
+        margin: 0 auto;
+        border: solid 0.5vw;
+        border-radius: 10%;
+    }
+    .divImages div .characterImage1:hover{
+        border-color: yellow;
+    }
+    .closeDescription{
+        margin-left: 74%;
+    }
+    .showDescription:hover, .closeDescription:hover{
+        background-color: blue;
+        color: yellow;
+    }
+    .description_class_stats{
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+    }
+    .description_class_stats div{
+        max-width: 60%;
+    }
+    .descriptionPage{
+        font-size: 3vw;
+        margin: 1vw;
+    }
+    .stats{
+        font-weight: bold;
+        font-size: 2.6vw;
+        text-align: left;
+        border: solid 0.2vw;
+        padding: 0.5vw;
+        background-color: yellowgreen;
+    }
+    .stats:hover{
+        background-color: black;
+        color: wheat;
+    }
+    .stats p::first-letter{
+        text-transform: uppercase;
+    }
+    .typePage{
+        font-size: 2.6vw;
+        font-weight: bold;
+        margin: 1vw;
+    }
+    .typePage,.type{
+        background-color: aqua;
+        width: 16vw;
+    }
+    .type:hover, typePage:hover{
+        border-color: aqua;
+    }
+    #final{
+        width: 100%;
+        height: 6vw;
+    }
+    footer{
+        border: solid 1.3vw orange;
+        height: 32vw;
+        background-color: wheat;
+        border-radius: 5%;
+        padding: 1vw;
+        text-align: center;
+        font-size: 2.4vw;
+    }
+    #pageButtons{
+        display:flex;
+        justify-content: space-evenly;
+        margin: 0 3vw 4vw 3vw;
+    }
+    .pageBtn{
+        width: 8vw;
+        height: 8vw;
+        font-size: 4.8vw;
+        background-color: rgb(220, 220, 3);
+        color: black;
+        font-weight: bold;
+        border-radius: 50%;
+    }
+    .pageBtn:hover{
+        background-color: blue;
+        color: yellow;
+    }
+}
