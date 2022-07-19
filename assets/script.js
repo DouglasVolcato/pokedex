@@ -44,6 +44,10 @@ async function getPokemons(page = 0,number = 99){
             const evolution1 = await fetch(species);
             const evolution = await evolution1.json();
 
+            if (id == 236){
+                console.log(evolution.chain);
+            }
+
             try{
                 evolutionName1 = evolution.chain.species.name;
             } catch(e){
@@ -74,21 +78,51 @@ async function getPokemons(page = 0,number = 99){
             } catch(e){
                 evolutionId3 = "Not found";
             }
+            evolutionId1Real = evolutionId1 == "" ? "Not found" : evolutionId1;
+            evolutionId2Real = evolutionId2 == "" ? "Not found" : evolutionId2;
+            evolutionId3Real = evolutionId3 == "" ? "Not found" : evolutionId3;
+
+            if (id != evolutionId1Real && id != evolutionId2Real && id != evolutionId3Real){
+                for (let i = 1; i <= 8; i++){
+                    try{
+                        if (id == evolution.chain.evolves_to[i].species.url.replace("https://pokeapi.co/api/v2/pokemon-species/", "").replace("/", "").split(' ').join('')){
+                            evolutionId2 = evolution.chain.evolves_to[i].species.url.replace("https://pokeapi.co/api/v2/pokemon-species/", "").replace("/", "").split(' ').join('');
+                            evolutionName2 = evolution.chain.evolves_to[i].species.name
+                        }
+                    } catch(e){}
+                    for (let f = 0; f <= 8; f++){
+                        try{
+                            if (id == evolution.chain.evolves_to[i].evolves_to[f].species.url.replace("https://pokeapi.co/api/v2/pokemon-species/", "").replace("/", "").split(' ').join('')){
+                                evolutionId3 = evolution.chain.evolves_to[i].evolves_to[f].species.url.replace("https://pokeapi.co/api/v2/pokemon-species/", "").replace("/", "").split(' ').join('');
+                                evolutionName3 = evolution.chain.evolves_to[i].evolves_to[f].species.name;
+                            }
+                        } catch(e){}
+                    }
+                }
+            }
+            evolutionId1Real = evolutionId1 == "" ? "Not found" : evolutionId1;
+            evolutionId2Real = evolutionId2 == "" ? "Not found" : evolutionId2;
+            evolutionId3Real = evolutionId3 == "" ? "Not found" : evolutionId3;
+
+            evolutionImage1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId1}.png`;
+            evolutionImage2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId2}.png`;
+            evolutionImage3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId3}.png`;
+            evolutionImage1Real = evolutionId1Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage1;
+            evolutionImage2Real = evolutionId2Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage2;
+            evolutionImage3Real = evolutionId3Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage3;
         } 
         catch(e){
-            console.log("ERRO 404");
-        }
+            evolutionId1Real = evolutionId1 == "" ? "Not found" : evolutionId1;
+            evolutionId2Real = evolutionId2 == "" ? "Not found" : evolutionId2;
+            evolutionId3Real = evolutionId3 == "" ? "Not found" : evolutionId3;
 
-        evolutionId1Real = evolutionId1 == "" ? "Not found" : evolutionId1;
-        evolutionId2Real = evolutionId2 == "" ? "Not found" : evolutionId2;
-        evolutionId3Real = evolutionId3 == "" ? "Not found" : evolutionId3;
-        
-        evolutionImage1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId1}.png`;
-        evolutionImage2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId2}.png`;
-        evolutionImage3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId3}.png`;
-        evolutionImage1Real = evolutionId1Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage1;
-        evolutionImage2Real = evolutionId2Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage2;
-        evolutionImage3Real = evolutionId3Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage3;
+            evolutionImage1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId1}.png`;
+            evolutionImage2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId2}.png`;
+            evolutionImage3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evolutionId3}.png`;
+            evolutionImage1Real = evolutionId1Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage1;
+            evolutionImage2Real = evolutionId2Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage2;
+            evolutionImage3Real = evolutionId3Real == "Not found" ? "./assets/images/noImage.jpg" : evolutionImage3;
+        }
 
         let image = "";
 
