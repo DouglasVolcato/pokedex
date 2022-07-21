@@ -23,12 +23,41 @@ html{
     height: 15vw;
     margin: auto;
 }
+#search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10%;
+    height: 20vw;
+    padding-bottom: 9vw;
+    padding-top: 5vw;
+    margin: auto;
+}
+#search2{
+    margin-top: -4vw;
+    padding: 1.5vw;
+}
+#inputSearch{
+    font-size: 1.7vw;
+}
+#buttonSearch{
+    font-size: 1.7vw;
+    font-weight: bold;
+    padding: 0.2vw;
+    background-color: rgb(0, 102, 255);
+    color: rgb(229, 255, 0);
+    border-radius: 17%;
+}
+#buttonSearch:hover{
+    background-color: aqua;
+}
 h1{
-    padding: 15%;
+    padding: 8%;
     font-size: 5vw;
     color: red;
     text-decoration: underline;
-    text-shadow: 1.9px 1.8px rgb(0, 34, 254)
+    text-shadow: 1.9px 1.8px rgb(0, 34, 254);
+    margin: 0;
 }
 nav{
     width: 100%;
@@ -263,6 +292,12 @@ footer{
         margin: auto;
     }
     h1{
+        display: none;
+    }
+    #inputSearch{
+        display: none;
+    }
+    #buttonSearch{
         display: none;
     }
     nav{
@@ -507,6 +542,12 @@ footer{
         margin: auto;
     }
     h1{
+        display: none;
+    }
+    #inputSearch{
+        display: none;
+    }
+    #buttonSearch{
         display: none;
     }
     nav{
