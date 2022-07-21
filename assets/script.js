@@ -1,11 +1,6 @@
-async function getPokemons(page = 0,number = 99){
+async function getPokemons(page = 0,number = 1){
     const server = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${number}&offset=${page}`);
     const data = await server.json();
-
-    const everyCard = document.querySelectorAll(".card")
-    for (let n of everyCard){
-        n.style.display = "none";
-    }
 
     data.results.forEach(async function(item) {
 
@@ -233,6 +228,7 @@ async function getPokemons(page = 0,number = 99){
         }
 
         if (true){
+    
             document.querySelector("#cardList").insertAdjacentHTML("beforeend", `
             
             <div class="card">
@@ -328,4 +324,46 @@ function closeDescription(){
     }
 }
 
-getPokemons(0, 100);
+async function search(){
+    const inputSearch = document.querySelector("#inputSearch");
+    const allCards = document.querySelectorAll(".card");
+
+    for (let n of allCards){
+        n.style.display = "none";
+    }
+
+    await getPokemons(0, 10000);
+
+    const allCards2 = document.querySelectorAll(".card");
+
+    for(let n of allCards2){
+        if (n.querySelector(".type").innerText.toUpperCase().includes(inputSearch.value.toUpperCase())){
+            n.style.display = "";
+        } else if (n.querySelector(".ID").innerText.toUpperCase().includes(inputSearch.value.toUpperCase())){
+            n.style.display = "";
+        } else if (n.querySelector(".name").innerText.toUpperCase().includes(inputSearch.value.toUpperCase())){
+            n.style.display = "";
+        } else {
+            n.style.display = "none";
+        }
+    }
+    inputSearch.value = "";
+}
+
+async function pages(from = 0, to = 99) {
+
+    const everyCard = document.querySelectorAll(".card")
+    for (let n of everyCard){
+        n.style.display = "none";
+    }
+    
+    const qtd = from + to
+
+    for (let i = from; i <= qtd; i++){
+        await new Promise((resolve) => {
+            resolve(getPokemons(i));
+        });
+    }
+}
+
+pages(0, 99, 1);
