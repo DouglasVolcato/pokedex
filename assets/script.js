@@ -132,7 +132,7 @@ async function getPokemons(page = 0,number = 1){
 
         let description = "";
 
-        for (let i = 0; i <= 5; i++){
+        for (let i = 0; i <= 500; i++){
             if (data2.flavor_text_entries[i].language.name == "en"){
 
                 description = data2.flavor_text_entries[i].flavor_text;
@@ -366,4 +366,4 @@ async function pages(from = 0, to = 99) {
     }
 }
 
-pages(0, 99, 1);
+pages(0, 124);
