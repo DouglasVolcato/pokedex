@@ -1,4 +1,4 @@
-https://douglasvolcato.github.io/pokedex-api/
+https://douglasvolcato.github.io/pokedex/
 
 ## Instruções
 Tome como exemplo esse site que mostra como as informações dos Pokemons devem ser apresentadas, inclusive todas as informações contidas por pokemon nesse site, serão obrigatórias no seu projeto, e eles são:
